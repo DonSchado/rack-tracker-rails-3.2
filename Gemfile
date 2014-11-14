@@ -11,4 +11,4 @@ end
 
 gem 'jquery-rails'
 gem 'quiet_assets'
-
+gem 'rack-tracker', '~> 0.2.6'

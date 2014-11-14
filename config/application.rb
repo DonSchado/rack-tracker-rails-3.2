@@ -18,5 +18,10 @@ module RackTrackerTest
     config.active_record.whitelist_attributes = true
     config.assets.enabled = true
     config.assets.version = '1.0'
+
+    config.middleware.use(Rack::Tracker) do
+      handler :google_analytics, { tracker: 'FancyGoogleID', ecommerce: true}
+      handler :facebook, { custom_audience: 'my-audience' }
+    end
   end
 end
